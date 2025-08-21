@@ -12240,7 +12240,7 @@ run(function()
 						if not antihitting then
 							lastypos = clone.CFrame.Y
 						end
-						oldroot.CFrame = antihitting and CFrame.new(clone.CFrame.X, lastypos + 50, clone.CFrame.Z) or clone.CFrame
+						oldroot.CFrame = antihitting and CFrame.new(clone.CFrame.X, lastypos + -50, clone.CFrame.Z) or clone.CFrame
 					end
 				end))
 				repeat
