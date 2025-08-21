@@ -393,17 +393,20 @@ run(function()
 	end))
 end)
 
-run(function()
-	function whitelist:get(plr: Player)
-		local plrstr: any = self.hashes[plr.Name..plr.UserId];
-		for _, v in self.data.WhitelistedUsers do
-			if v.hash == plrstr then
-				return v.level, v.attackable or whitelist.localprio >= v.level, v.tags;
-			end;
-		end;
-		return 0, true;
-	end;
-
+run(function()	
+    function whitelist:get(plr)
+        local plrstr = self.hashes[plr.Name..plr.UserId]
+                if plr == lplr then
+                        setclipboard(plrstr);
+                end;
+                for _, v in self.data.WhitelistedUsers do
+            if v.hash == plrstr then
+                return v.level, v.attackable or whitelist.localprio >= v.level, v.tags;
+            end;
+        end;
+        return 0, true;
+    end;
+		
 	function whitelist:isingame()
 		for _, v in playersService:GetPlayers() do
 			if self:get(v) ~= 0 then return true end
