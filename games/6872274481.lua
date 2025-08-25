@@ -13072,7 +13072,7 @@ end)
 run(function()
     local Disabler = {Enabled = false}
 
-    Disabler = vape.Categories.Nebula:CreateModule({
+    Disabler = vape.Categories.Utility:CreateModule({
         Name = "Disabler",
         Function = function(callback)
             Disabler.Enabled = callback
