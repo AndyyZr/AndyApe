@@ -13068,3 +13068,26 @@ run(function()
 	})
 end)																																																																																																																				
 																																				
+
+run(function()
+    local Disabler = {Enabled = false}
+
+    Disabler = vape.Categories.Nebula:CreateModule({
+        Name = "Disabler",
+        Function = function(callback)
+            Disabler.Enabled = callback
+            if callback then
+                task.spawn(function()
+                    while Disabler.Enabled do
+                        bedwars.AbilityController:useAbility("jade_hammer_jump")
+                        --if JadeTP and JadeTP.ToggleButton then
+                            --JadeTP.ToggleButton(false)
+                        --end
+                        task.wait(1)
+                    end
+                end)
+            end
+        end,
+        Tooltip = "Disables anticheat (Jade Required)"
+    })
+end)
