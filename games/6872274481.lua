@@ -3697,12 +3697,12 @@ run(function()
 				end  
            end)
 		end,
-		SecondHighResPack = function() 
+		Aquarium = function() 
             task.spawn(function()
 				local Players = game:GetService("Players")
 				local ReplicatedStorage = game:GetService("ReplicatedStorage")
 				local Workspace = game:GetService("Workspace")
-				local objs = game:GetObjects("rbxassetid://14078540433")
+				local objs = game:GetObjects("rbxassetid://14217388022")
 				local import = objs[1]
 				import.Parent = game:GetService("ReplicatedStorage")
 				index = {
