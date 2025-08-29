@@ -81,6 +81,7 @@ local function finishLoading()
 		if not vape.Categories then return end
 		if vape.Categories.Main.Options['GUI bind indicator'].Enabled then
 			vape:CreateNotification('Finished Loading', vape.VapeButton and 'Press the button in the top right to open GUI' or 'Press '..table.concat(vape.Keybind, ' + '):upper()..' to open GUI', 5)
+			notif("IMPORTANT", "Ok so uhh lets js say CreamyWare is discontinued since my account on discord (trariviste) has been striked down so CreamyWare is DISCONTINUED and btw i was 12 all along so uhh there u go", 10000, "alert")
 		end
 	end
 end
